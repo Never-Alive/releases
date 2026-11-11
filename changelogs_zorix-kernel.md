@@ -1,5 +1,40 @@
 # Changelogs
 
+## v2.1 - 11/11/2026
+* Re-import OEM changes for USB from `star-r-oss`
+* Re-import OEM changes for thermal from `ziyi-s-oss`
+* Re-import OEM changes for power from `redwood-s-oss`
+* Switch to DRM panel notifier
+* Adapt necessary drivers for DRM panel notifier
+* Fix failure of haptic patterns when requesting slightly higher voltage than the limit
+* Switch back to 250Hz tick
+* Reduce NTP wakeups
+* Disable more useless drivers
+* Rewrite ashmem, iommu for performance and clarity
+* Spoof missing file for libperfmgr to stop logspam
+* Reduce tracing for ext4 and f2fs
+* Hardcode back zram to 4GB
+* Hardcode back swappiness to 80
+* Wake up GPU on ioctl rather than touch
+* Reduce logging for GPU and inline governors
+* Workaround for sensor IPC message
+* Upstream SCHED to `linux-6.1` (no-WALT)
+* Upstream RCU to `linux-5.15`
+* Backport binder_alloc from `linux-5.15`
+* Backport EEVDF into zorix
+* Backport DELAY_DEQUEUE into zorix
+* Backport KFENCE into zorix
+* Introduce CASS scheduler and reduce PELT half-life to 16ms
+* Silence logspam caused by focaltech driver
+* Prevent userspace from using s2idle
+* Disable wakeup reason logging and prevent sleep aborts
+* Prevent suspend failure and silence exit logspam
+* Reduce verbose logspam of proximity sensor
+* Silence CNSS logspam and stop logspam due to some router sending invalid QRV values
+* Do not print playback and stop event logs
+* Add ramoops reserved memory region and specify reason
+* Update kernelsu driver to v32740
+
 ## v2.0 - 20/9/2026
 
 > **Since 2.0 is full rebase many changes of v1.0 are missing**
